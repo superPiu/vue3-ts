@@ -1,5 +1,7 @@
 <template>
-    <input type="text" v-model="title" placeholder="输入待办事宜" @keyup.enter="add">
+    <div class="header">
+        <input type="text" v-model="title" placeholder="输入待办事宜" @keyup.enter="add"><button @click="add">新增</button>
+    </div>
 </template>
 
 <script lang="ts">
@@ -32,6 +34,22 @@ export default defineComponent({
 });
 </script>
 
-<style lang='sass' scoped>
-
+<style lang='scss' scoped>
+    .header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom:20px;
+        input{
+            width: 80%;
+            height: 40px;
+            padding :0 10px;
+            border: 1px solid #d1d1d1;
+            border-radius: 4px;
+        }
+        button{
+            width: 18%;
+            height: 40px;
+            text-align: center;
+        }
+    }
 </style>
